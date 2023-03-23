@@ -1,0 +1,15 @@
+name: Send Curl Request
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  send_request:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send Request
+        run: |
+          curl -X POST \
+            -H "Content-Type: application/json" \
+            -d '{"message": "Hello, world!"}' \
+            http://localhost:5057/create-bulk-git
