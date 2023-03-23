@@ -9,7 +9,4 @@ jobs:
     steps:
       - name: Send Request
         run: |
-          curl -X POST \
-            -H "Content-Type: application/json" \
-            -d '{"message": "Hello, world!"}' \
-            http://localhost:5057/create-bulk-git
+          curl http://localhost:5057/api/create-bulk-git
