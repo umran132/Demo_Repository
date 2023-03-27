@@ -9,4 +9,4 @@ jobs:
     steps:
       - name: Send Request
         run: |
-          curl http://localhost:5057/api/create-bulk-git
+          curl https://00f0-49-204-19-20.in.ngrok.io/api/create-bulk-git?jsonFilePath=https://github.com/AppkubeCloud/json-data.git
