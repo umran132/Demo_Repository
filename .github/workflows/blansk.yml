@@ -1,0 +1,19 @@
+name: Read new files on commit
+
+on:
+  push:
+    branches: master
+jobs:
+  read-files:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+      
+    - name: Get list of new files
+      id: files
+      run: |
+        echo "::set-output name=files::$(git diff-tree --no-commit-id --name-only -r ${GITHUB_SHA}^..${GITHUB_SHA} .)"
+
+    - name: Print new files
+      run: echo "${{ steps.files.outputs.files }}"
