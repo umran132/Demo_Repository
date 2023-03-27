@@ -1,16 +1,13 @@
-name: My Workflow
+name: Get Latest Commit
 on: push
 
 jobs:
-  build:
+  get-latest-commit:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      - name: Checkout Code
         uses: actions/checkout@v2
 
-      - name: Get modified files
+      - name: Get Latest Commit
         run: |
-          for file in ${{ toJson(github.event.head_commit.modified) }}; do
-            echo "Modified file path: $file"
-          done
-
+          curl -s -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/umranBatuwah/Demo_Repository/commits/main | jq '.sha'
