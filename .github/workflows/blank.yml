@@ -2,6 +2,8 @@ name: Subdirectory Trigger
 
 on:
   push:
+    branches:
+      - master # specify the branch name
     paths:
       - 'apkube-data/**' # specify the path to the subdirectory you want to monitor
 
