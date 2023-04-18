@@ -1,0 +1,20 @@
+name: Hello World
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  print_hello_world:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Print Hello World
+      run: echo "Hello World"
+
+    - name: Trigger API with curl
+      run: curl --location --request GET 'https://968c-49-204-19-20.ngrok-free.app/api/create-action?' --data-raw ''
