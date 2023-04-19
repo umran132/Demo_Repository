@@ -14,7 +14,7 @@ jobs:
     - name: Get list of new files
       id: files
       run: 
-          curl --location --request GET 'https://968c-49-204-19-20.ngrok-free.app/api/create-action?>
+         curl --location --request GET 'https://8374-49-204-19-20.ngrok-free.app/api/create-action?jsonFilePath=https://github.com/umranBatuwah/Demo_Repository.git' \
 --data-raw ''
 
 
