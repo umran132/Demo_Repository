@@ -8,7 +8,7 @@
 	"serviceNature": "Business",
 	"associatedCommonService": "NA",
 	"associatedBusinessService": "Admission",
-    "serviceName":"Admission-App7sd",
+    "serviceName":"Admission-App7sfedfd",
     "description": "Java Spring Boot App in k8",
     "clusterServiceLoaction":{
         "landingZone":"67894532",
