@@ -17,4 +17,4 @@ jobs:
       run: echo "Hello World"
 
     - name: Trigger API with curl
-      run: curl --location --request GET 'https://42d5-49-204-19-20.ngrok-free.app/api/create-action?jsonFilePath=https://github.com/umranBatuwah/Demo_Repository.git' \
+      run: curl --location --request GET 'https://b8be-49-204-19-20.ngrok-free.app/api/create-action?jsonFilePath=https://github.com/umranBatuwah/Demo_Repository.git' \
